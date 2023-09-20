@@ -145,13 +145,13 @@ login.addEventListener('click', ()=>{
     window.location.href = '../login';
 });
 
-console.log(BASE_URL + 'menu/updateCart');
 
 const redirect = document.querySelector('#menu');
 redirect.addEventListener('click', ()=>{
-    const form = document.querySelector('#form');
-    form.action = BASE_URL + 'menu/updateCart';
-    console.log(BASE_URL + 'menu/updateCart');
+    const prodottiCarrello = document.querySelector('#prodottiCarrello');
+    const carrello = document.querySelector('#carrello');
+    prodottiCarrello.value = carrello.value;
+    const form = document.querySelector('#formCart');
     form.submit();
 });
 
@@ -190,12 +190,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
    
-});
-
-window.onload = function (){
-   
-};
-
-document.addEventListener('DOMContentLoaded', ()=>{
-
 });

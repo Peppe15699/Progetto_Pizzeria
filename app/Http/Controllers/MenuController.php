@@ -42,9 +42,9 @@ class MenuController extends BaseController{
     }
 
     public function updateCart() {
-            Session::forget('carrello');
+        Session::forget('carrello');
         
-        $carrello = request('carrello');
+        $carrello = request('prodottiCarrello');
         session()->put('carrello',$carrello);
         return redirect('menu');
     }
